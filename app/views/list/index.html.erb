@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="lists-container">
+    <div class="lists-container-1">
+      <h1>My lists</h1>
+      <%= link_to "New list", lists_new_path, class: "devise-btn" %>
+    </div>
+
+    <div class="list-container-2">
+      <% @lists.each do |list| %>
+        <div class="list-inner-container">
+          <div class="hidden-data">
+            <% Content.where(list_id: list.id).each do |content| %>
+              <% Movie.where(id: content.movie_id).last(5).each do |movie| %>
+                <div class="hidden-id"><%= movie.db_id %></div>
+              <% end %>
+            <% end %>
+          </div>
+          <%= link_to delete_list_path(list), method: :delete, class: "trash-list" do %>
+            <i class="fas fa-trash-alt"></i>
+          <% end %>
+          <div class="list-preview-container">
+            <%= link_to "", list_path(list), class: "link"%>
+            <div class="list-title"><%= "#{list.title} (#{Content.where(list_id: list.id).count} movies)" %></div>
+            <div class="previews">
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<%= render 'shared/footer' %>

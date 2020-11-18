@@ -1,0 +1,122 @@
+// Place all the styles related to the List controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.lists-container {
+  width: 65%;
+  min-height: inherit;
+  display: flex;
+  flex-direction: column;
+}
+
+.lists-container-1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  & h1 {
+    font-family: "Playfair Display", serif;
+  }
+}
+
+.lists-container-2 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.list-title {
+  width: auto;
+  & a {
+    text-decoration: none;
+    color: white;
+    font-weight: 100;
+    font-size: 1rem;
+  }
+}
+
+.content-id a {
+  visibility: hidden;
+}
+
+.list-preview-container {
+  background-color: rgb(52, 52, 52);
+  overflow: hidden;
+  min-height: 151px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  padding: 8px;
+  transition: 0.2s ease-in;
+  border-radius: 8px;
+  padding: 8px;
+  & a {
+    padding-left: 0.5rem;
+  }
+  &:hover {
+    background-color: rgb(69, 69, 69);
+    transition: 0.2s ease-in;
+  }
+}
+
+.previews {
+  display: flex;
+  & img {
+    height: auto;
+    width: 90px;
+    margin-left: 0.5rem;
+    border-radius: 4px;
+  }
+}
+
+.link {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.hidden-id {
+  visibility: hidden;
+}
+
+.hidden-data {
+  height: 0px;
+  width: 0px;
+}
+
+.list-inner-container {
+  position: relative;
+}
+
+.trash-list {
+  bottom: 10px;
+  left: 10px;
+  z-index: 5;
+  text-decoration: none;
+  color: white;
+  position: absolute;
+  transition: 0.3s ease-in;
+  &:hover {
+    transition: 0.3s ease-in;
+    color: rgb(126, 126, 126);
+  }
+}
+
+.trash-list-show {
+  bottom: 8px;
+  right: 8px;
+  z-index: 5;
+  text-decoration: none;
+  color: white;
+  position: absolute;
+  transition: 0.3s ease-in;
+  &:hover {
+    transition: 0.3s ease-in;
+    color: rgb(126, 126, 126);
+  }
+}

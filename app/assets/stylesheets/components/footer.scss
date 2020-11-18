@@ -1,0 +1,19 @@
+.footer {
+  width: 100%;
+  color: rgb(147, 147, 147);
+  background: rgb(27, 27, 27);
+  clear: both;
+  position: relative;
+  height: 3.5rem;
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  & p {
+    padding-right: 1.75rem
+  }
+  & img {
+    height: 1.8rem;
+    padding-left: 1.75rem;
+  }
+}

@@ -1,0 +1,12 @@
+<div class="container">
+  <%= form_for(@list, html: {class: "form"}) do |f| %>
+    <h2>New list</h2>
+    <div class="field">
+      <%= f.label :title %>
+      <%= f.text_field :title, autofocus: true %>
+    </div>
+    <div class="actions">
+      <%= f.submit "Create list" %>
+    </div>
+  <% end %>
+</div>

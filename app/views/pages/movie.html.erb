@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="movie-view">
+    <%= @id %>
+  </div>
+  <div class="invisible">
+    <div class="selector hidden">
+      <% if user_signed_in? %>
+        <div class="close-list"><i class="far fa-times-circle"></i></div>
+        <ul>
+        <% List.where(user_id: current_user.id).each do |list| %>
+          <li><%= link_to "#{list.title}", save_movie_path(list: list.id), method: :post, class: "mylists-el"  %></li>
+        <% end %>
+        </ul>
+      <% else %>
+        <div class="close-list"><i class="far fa-times-circle"></i></div>
+        <p>You must be signed in to add a film to a list</p>
+      <% end %>
+    </div>
+  </div>
+</div>
+<%= render 'shared/footer' %>

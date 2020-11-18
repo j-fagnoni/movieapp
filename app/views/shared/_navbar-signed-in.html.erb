@@ -1,0 +1,45 @@
+<div class="navbar">
+  <div class="navbar-1">
+    <%= link_to "MovieApp",  popular_path, class: "logo" %>
+    <%= link_to "Popular",  popular_path, class: "categories popular" %>
+    <%= link_to "Upcoming",  upcoming_path, class: "categories upcoming" %>
+  </div>
+  <div class="navbar-2">
+    <%= render 'shared/searchbar' %>
+    <nav role="navigation">
+      <div id="menuToggle">
+        <input type="checkbox" />
+        
+        <span></span>
+        <span></span>
+        <span></span>
+        
+        <ul id="menu">
+          <li><%= link_to "Log Out", destroy_user_session_path, method: :delete, class: "burger-link" %></li>
+          <li><%= link_to "My Lists", lists_path, class: "burger-link" %></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</div>
+
+<div class="hamburger">
+  <%= link_to "MovieApp",  popular_path, class: "logo" %>
+  <%= render 'shared/searchbar-r' %>
+  <nav role="navigation">
+    <div id="menuToggle">
+      <input type="checkbox" />
+      
+      <span></span>
+      <span></span>
+      <span></span>
+      
+      <ul id="menu">
+        <li><%= link_to "Popular",  popular_path, class: "burger-link popular" %></li>
+        <li><%= link_to "Upcoming",  upcoming_path, class: "burger-link upcoming" %></li>
+        <li><%= link_to "Log Out",  destroy_user_session_path, method: :delete, class: "burger-link" %></li>
+        <li><%= link_to "My Lists", lists_path, class: "burger-link" %></li>
+      </ul>
+    </div>
+  </nav>
+</div>

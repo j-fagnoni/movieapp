@@ -1,0 +1,16 @@
+<div class="container-column">
+  <h1><%= @list.title %></h1>
+  <div class="movies-container list-show-container">
+    <% @contents.each do |content| %>
+      <div class="list-show-container-1">
+        <% Movie.where(id: content.movie_id).each do |movie| %>
+          <%= movie.db_id %>
+        <% end %>
+      </div>
+      <div class="list-show-container-2">
+        <%= content.id %>
+      </div>
+    <% end %>
+  </div>
+</div>
+<%= render 'shared/footer' %>
